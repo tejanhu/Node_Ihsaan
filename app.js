@@ -1,17 +1,12 @@
-var fs = require('fs')
+const express = require('express')
 
-// fs.writeFile('calc1.js','console.log("Created new file!")', function(err){
-//     console.log("File created successfully!")
-// })
+const app = express();
 
-// fs.readFile('calc1.js','utf-8', function(err,data){
-//     console.log(data)
-// })
-
-// fs.appendFile('calc1.js','\nconsole.log("Appended file successfully!")', function(err){
-//     console.log("File appended successfully!")
-// })
-
-fs.unlink("calc1.js",function(error){
-    console.log("File no longer exists")
+app.get('/', function(req, res){
+    res.send("Hello World!")
 })
+
+
+app.listen(9000, function(req,res){
+    console.log('Currently running....')
+});
