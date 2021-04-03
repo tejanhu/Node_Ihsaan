@@ -1,5 +1,5 @@
 var fs = require('fs')
 
-fs.readFile('calc.js','utf-8', function(err, data){
-    console.log(data)
+fs.appendFile('calc.js','\nconsole.log("just appended this to the file")', function(err){
+    console.log("File appended!")
 })

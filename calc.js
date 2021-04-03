@@ -18,3 +18,4 @@ function mod(n,m){
 exports.add = add
 exports.sub = sub
 module.exports.mod = mod
+console.log("just appended this to the file")
